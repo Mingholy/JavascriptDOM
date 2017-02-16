@@ -3,28 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>JSDOM chapter4 example</title>
+    <link rel="stylesheet" href="layout.css" media="screen">
 </head>
 <body>
 <h1>Snapshots</h1>
 <div class="main">
     <ul class="pic-list">
-        <li class="pic-list-item"><a href="images/1.jpg" class="pic-link" onclick="showPic(this); return false;">Fireworkd</a></li>
-        <li class="pic-list-item"><a href="images/2.jpg" class="pic-link" onclick="showPic(this); return false;">Coffee</a></li>
-        <li class="pic-list-item"><a href="images/3.jpg" class="pic-link" onclick="showPic(this); return false;">Rose</a></li>
-        <li class="pic-list-item"><a href="images/4.jpg" class="pic-link" onclick="showPic(this); return false;">Big ben</a></li>
+        <li class="pic-list-item"><a href="images/1.jpg" class="pic-link" onclick="showPic(this); return false;" title="Joanna Froggatt portrait 1">Fireworkd</a></li>
+        <li class="pic-list-item"><a href="images/2.jpg" class="pic-link" onclick="showPic(this); return false;" title="Joanna Froggatt portrait 2">Coffee</a></li>
+        <li class="pic-list-item"><a href="images/3.jpg" class="pic-link" onclick="showPic(this); return false;" title="Joanna Froggatt portrait 3">Rose</a></li>
+        <li class="pic-list-item"><a href="images/4.jpg" class="pic-link" onclick="showPic(this); return false;" title="Joanna Froggatt portrait 4">Big ben</a></li>
     </ul>
     <div class="img-container">
         <img src="images/placeholder.png" alt="this is a placeholder" id="placeholder">
+        <p id="description">She's Joanna Froggatt, she's an actress. As Anna in Downton Abbey</p>
     </div>
-
 </div>
     
 </body>
-<script type="text/javascript">
-    function showPic(whicpic) {
-        var pichref = whicpic.getAttribute("href");
-        var placeholder = document.getElementById("placeholder")
-        placeholder.setAttribute("src", pichref);
-    }
-</script>
+<script type="text/javascript" src="showPic.js"></script>
 </html>
